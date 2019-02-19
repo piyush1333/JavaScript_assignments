@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>problem8</title>
+	<style type="text/css">
+		.input
+		{
+			margin: 0 auto;
+			padding: 10px;
+			width: 250px;
+			border:1px solid black;
+		}
+	</style>
+	<script type="text/javascript">
+		function revArray()
+		{	
+			var k =0;
+			var i= 0;
+			var str1 = document.forms["arrayForm"]["array1"].value;
+			var array = str1.split("");
+			var length= array.length;
+			// alert(length);
+			var reverse = [];
+
+			for(i=length-1; i >=0;i--)
+			{
+				var rev = array[i];
+				reverse.push(rev);
+			}
+			for(k=0;k<=length-1;k++)
+			{
+				document.write(reverse[k]);
+			}
+			
+		}
+	</script>
+
+</head>
+<body>
+	<div class="input">
+		<form action="" method="post" name="arrayForm" onsubmit="return revArray()" >
+			array1 <input type="text" name="array1"><br>
+			<center><input type="submit" name=""> </center>
+		</form>	
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>problem1</title>
+	<style type="text/css">
+		.input
+		{
+			margin:0 auto;
+			padding:10px;
+			border:1px solid black;
+			width: 250px;
+		}
+	</style>
+	<script type="text/javascript">
+		function percentage()
+		{	
+			var total = 400;
+			var sub1 = document.forms["perForm"]["sub1"].value;
+			var sub2 = document.forms["perForm"]["sub2"].value;
+			var sub3 = document.forms["perForm"]["sub3"].value;
+			var sub4 = document.forms["perForm"]["sub4"].value;
+			var sum = 0; 
+			sum = +sub1 + +sub2 + +sub3 + +sub4;
+			percentage = (sum*100)/total;
+			alert(percentage);
+		}
+	</script>
+</head>
+<body>
+	<div class="input">
+		<form name="perForm" action="" onsubmit="return percentage()" method="post">
+			subject 1 <input type="text" name="sub1"><br>
+			subject 2 <input type="text" name="sub2"><br>
+			subject 3 <input type="text" name="sub3"><br>
+			subject 4 <input type="text" name="sub4"><br>
+			<center>  <input type="submit" name=""> </center>
+		</form>		  
+	</div>
+</body>
+</html>

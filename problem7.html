@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>problem7</title>
+	<style type="text/css">
+		.input
+		{
+			margin: 0 auto;
+			padding: 10px;
+			width: 250px;
+			border:1px solid black;
+		}
+	</style>
+	<script type="text/javascript">
+
+		function addArray()
+		{	
+			var j=0;
+			var i= 0;
+			var k=0;
+			var temp1=0;
+			var temp2=0;
+			var str1 = document.forms["arrayForm"]["array1"].value;
+			var str2 = document.forms["arrayForm"]["array2"].value;
+			var array1 = str1.split("");
+			var array2 = str2.split("");
+			var length1= array1.length;
+			var length2= array2.length;
+			var result= [] ;
+
+			// alert(length1);
+			for(i=0;i<=length1-1;i++)
+			{
+				var res = +array1[i] + +array2[i];
+				result.push(res);
+			}
+			// document.write(result);
+			var length3 = result.length;
+			// alert(length3);
+			for(k=0;k<=length3-1;k++)
+			{
+				document.write(result[k]);
+			}
+		}
+
+	</script>
+
+</head>
+<body>
+	<div class="input">
+		<form action="" method="post" name="arrayForm" onsubmit="return addArray()" >
+			array1 <input type="text" name="array1"><br>
+			array2 <input type="text" name="array2"><br>
+			<center><input type="submit" name=""> </center>
+		</form>	
+	</div>
+	
+</body>
+</html>

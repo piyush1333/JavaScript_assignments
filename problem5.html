@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>problem5</title>
+	<style type="text/css">
+		.input
+		{
+			margin: 0 auto;
+			padding: 10px;
+			width: 250px;
+			border:1px solid black;
+		}
+	</style>
+	<script type="text/javascript">
+		function numString()
+		{	
+			var total = 0;
+			var i= 0;
+			var num = document.forms["numForm"]["number"].value;
+			var array = num.split("");
+			var count = array.length;
+			// alert(count);
+			for(i=0 ; i<=count-1;i++)
+			{
+				total = +total + +array[i];
+			}
+			// alert(total);
+			var average = total/count;
+			alert(average);
+
+		}
+	</script>
+
+</head>
+<body>
+	<div class="input">
+		<form action="" method="post" name="numForm" onsubmit="return numString()" >
+			number <input type="text" name="number"><br>
+			<center><input type="submit" name=""> </center>
+		</form>	
+	</div>
+	
+</body>
+</html>

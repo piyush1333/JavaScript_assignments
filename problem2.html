@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>problem2</title>
+	<style type="text/css">
+		.input
+		{
+			margin: 0 auto;
+			padding: 10px;
+			width: 250px;
+			border:1px solid black;
+		}
+	</style>
+	<script type="text/javascript">
+		function calculator()
+		{
+			var option = document.forms["calc"]["option"].value;
+			var num1 = document.forms["calc"]["num1"].value;
+			var num2 = document.forms["calc"]["num2"].value;
+
+			switch (option)
+			{
+				case "Addition":
+				var add = +num1 + +num2;
+				alert(add);
+				break;
+
+				case "Substraction":
+				var sub = num1 - num2;
+				alert(sub);
+				break;
+
+				case "Multiplication":
+				var mul = num1*num2;
+				alert(mul);
+				break;
+
+				case "Division":
+				var div = num1/num2;
+				alert(div);
+				break;
+
+			}
+		}
+
+	</script>
+</head>
+<body>
+	<div class="input">
+		<form action="" method="post" name="calc" onsubmit="return calculator()" >
+			choose the operation 
+			<select name="option">
+				<option>Addition</option>	
+				<option>Substraction</option>	
+				<option>Multiplication</option>	
+				<option>Division</option>	
+			</select><br>
+			number1 <input type="text" name="num1"><br>
+			number2 <input type="text" name="num2"><br>
+			<center><input type="submit" name=""> </center>
+		</form>	
+	</div>
+</body>
+</html>

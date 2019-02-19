@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>problem3</title>
+	<style type="text/css">
+		.input
+		{
+			margin: 0 auto;
+			padding: 10px;
+			width: 250px;
+			border:1px solid black;
+		}
+	</style>
+	<script type="text/javascript">
+		function table()
+		{	
+			var i= 0;
+			var num = document.forms["tableForm"]["num"].value;
+			
+			for(i = 1;i <= 10 ;i++)
+			{
+				var table = num * i;
+				document.write(table + "<br>");
+			}
+
+		}
+	</script>
+
+</head>
+<body>
+	<div class="input">
+		<form action="" method="post" name="tableForm" onsubmit="return table()" >
+			number <input type="text" name="num"><br>
+			<center><input type="submit" name=""> </center>
+		</form>	
+	</div>
+	
+</body>
+</html>
