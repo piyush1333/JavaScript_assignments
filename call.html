@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>call,bind & apply</title>
+	<script type="text/javascript">
+		
+		var studentData = {
+	    firstName:"Piyush", 
+	    profile: "THIS IS MY PROFILE",
+	    data: function(){
+	    console.log("my name is ", this.firstName); 
+      return this.profile
+    }
+		};
+		var student_info = function(name, occupation){
+		  console.log(this.data());
+		  console.log(this.data(),'I work as' + name + 'in'+ occupation);
+		};
+		var calling_bind = student_info.bind(studentData); 
+		var calling_call = student_info.call(studentData,' trainee ',' BTW ');
+		var calling_apply = student_info.apply(studentData,[' trainee ',' BTW ']);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
